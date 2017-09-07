@@ -1,0 +1,30 @@
+buildscript {
+  apply from: rootProject.file('config.gradle')
+
+  repositories {
+    google()
+    mavenCentral()
+    jcenter()
+    maven {
+      url 'https://plugins.gradle.org/m2'
+    }
+  }
+
+  dependencies {
+    classpath usedPlugins.kotlin
+    classpath usedPlugins.android
+  }
+}
+
+
+subprojects {
+  apply from: rootProject.file('config.gradle')
+
+  repositories {
+    google()
+    mavenCentral()
+    jcenter()
+  }
+}
+
+
